@@ -64,7 +64,7 @@ public:
     inline string& get_name() { return name; }
 
 public:
-	string* extends;
+    string* extends;
     string& name;
     ASTNode* node;
     TabMap* classVarsMap;
@@ -90,26 +90,15 @@ public:
     inline string& get_name() { return name; }
 
 public:
-	int num_p;
+    int num_p;
     string& name;
-	string return_type;
+    string return_type;
     ASTNode* node;
     TabMap* methodVarsMap;
     vector<TabMap*> methodParamsMaps;
     vector<vector<ASTNode*>> methodParamAssigns;
 
 };
-/*
-class ClassData {
-public:
-    ClassData() : methodMap(NULL) { }
 
-    inline MethodMap* get_node(){ return methodMap; }
 
-protected:
-
-    MethodMap* methodMap;
-
-};*/
-
-#endif /* _SYMTAB_H */
+#endif 
