@@ -26,24 +26,22 @@ MethodTabData* ClassTabData::lookup_method(string& var) {
 }
 
 TabData* ClassTabData::lookup_class_var(string& var) {
-	
-	TabMap::iterator mpos = (*classVarsMap).find(var);
-	TabData* td = (mpos != (*classVarsMap).end()) ? mpos->second : NULL;
+    TabMap::iterator mpos = (*classVarsMap).find(var);
+    TabData* td = (mpos != (*classVarsMap).end()) ? mpos->second : NULL;
     return td;
 }
 
 TabData* MethodTabData::lookup_method_var(string& var) {
-
-	TabMap::iterator mpos = (*methodVarsMap).find(var);
-	TabData* td = (mpos != (*methodVarsMap).end()) ? mpos->second : NULL;
+    TabMap::iterator mpos = (*methodVarsMap).find(var);
+    TabData* td = (mpos != (*methodVarsMap).end()) ? mpos->second : NULL;
 
     return td;
 }
 
 TabData* MethodTabData::lookup_method_param(string& var) {
-	assert(methodParamsMaps.size() >0);
-	TabMap::iterator mpos = (*methodParamsMaps[methodParamsMaps.size()-1]).find(var);
-	TabData* td = (mpos != (*methodParamsMaps[methodParamsMaps.size()-1]).end()) ? mpos->second : NULL;
+    assert(methodParamsMaps.size() >0);
+    TabMap::iterator mpos = (*methodParamsMaps[methodParamsMaps.size()-1]).find(var);
+    TabData* td = (mpos != (*methodParamsMaps[methodParamsMaps.size()-1]).end()) ? mpos->second : NULL;
 
     return td;
 }
@@ -58,12 +56,8 @@ ClassTabData* SymbolTable::insert_class(string& var){
 }
 
 void SymbolTable::push_scope(){
-
-	
-	
     ClassTabMap* cmap = new ClassTabMap();
     classMaps.push_back(cmap);
-
 }
 
 void SymbolTable::pop_scope(){	
@@ -84,8 +78,8 @@ MethodTabData* ClassTabData::insert_method(string& var){
     (*methodMaps[methodMaps.size()-1])[var] = mdata;
     mdata->methodVarsMap = new TabMap();
     vector<ASTNode*> vec;
-	mdata->methodParamAssigns.push_back(vec);
-	mdata->methodParamsMaps.push_back(new TabMap());
+    mdata->methodParamAssigns.push_back(vec);
+    mdata->methodParamsMaps.push_back(new TabMap());
     return mdata;
 }
 
@@ -98,15 +92,15 @@ TabData* MethodTabData::insert_method_var(string& var){
 TabData* MethodTabData::insert_method_param(string& var){   
     TabData* vdata;
     
-	for(int i = methodParamsMaps.size()-1; i>=0 ; i--){
-		vdata = new TabData(var);
-		(*methodParamsMaps[i])[var] = vdata;
-	}
+    for(int i = methodParamsMaps.size()-1; i>=0 ; i--){
+    	vdata = new TabData(var);
+	(*methodParamsMaps[i])[var] = vdata;
+    }
        
     return vdata;
 }
 
 void MethodTabData::insert_method_param_assign(ASTNode* n1){	
-	int i = methodParamAssigns.size()-1;
+    int i = methodParamAssigns.size()-1;
     methodParamAssigns[i].push_back(n1);
 }
