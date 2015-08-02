@@ -73,11 +73,11 @@ namespace ASTUtils{
     ASTNode*
     mk_main_node(string* id, ASTNode* n1);
     
-	void
-	mk_cref(string* s);
+    void
+    mk_cref(string* s);
 	
-	void
-	mk_cref(string* s, string* ext);
+    void
+    mk_cref(string* s, string* ext);
     
     ASTNode*
     mk_class_node(string* id, ASTNode* n1, ASTNode* n2);
@@ -95,7 +95,7 @@ namespace ASTUtils{
     mk_method_node(char *type, string *id, ASTNode* n1, ASTNode* n2, ASTNode* n3);
     
     ASTNode*
-	mk_methods_node(ASTNode* n1, ASTNode* n2);
+    mk_methods_node(ASTNode* n1, ASTNode* n2);
 
     ASTNode*
     mk_stmts_node(ASTNode* n1, ASTNode* n2);
@@ -124,47 +124,47 @@ namespace ASTUtils{
     ASTNode*
     mk_bconst_node(bool bval);
 
-	ASTNode*
-	mk_varDecls_node(ASTNode* n1, ASTNode* n2);
+    ASTNode*
+    mk_varDecls_node(ASTNode* n1, ASTNode* n2);
 
-  ASTNode*
-  mk_vref_node(string* name, char* type);
+    ASTNode*
+    mk_vref_node(string* name, char* type);
 
-  ASTNode*
-  get_vref_node(string* name);
+    ASTNode*
+    get_vref_node(string* name);
        	
-	ASTNode*
-	mk_newId(string* s);
+    ASTNode*
+    mk_newId(string* s);
 		
-	ASTNode*
-	mk_int_vec_node(ASTNode* n1);
+    ASTNode*
+    mk_int_vec_node(ASTNode* n1);
 	
-	ASTNode*
-	mk_vec_value_node(ASTNode* n1, ASTNode* n2);
+    ASTNode*
+    mk_vec_value_node(ASTNode* n1, ASTNode* n2);
 	
-	ASTNode*
-	mk_length_node(ASTNode* n1);
+    ASTNode*
+    mk_length_node(ASTNode* n1);
 	
-	ASTNode*
-	mk_negation_node(ASTNode* n1);
+    ASTNode*
+    mk_negation_node(ASTNode* n1);
 	
-	ASTNode*
-	mk_call_method_node(ASTNode* n1, string* mid);
+    ASTNode*
+    mk_call_method_node(ASTNode* n1, string* mid);
 	
-	ASTNode*
-	get_current_class_node();
+    ASTNode*
+    get_current_class_node();
 	
-	void
-	mk_param_value(ASTNode* n1);
+    void
+    mk_param_value(ASTNode* n1);
 	
-	char*
-  get_string_value(string* s);
+    char*
+    get_string_value(string* s);
     
-  void
-	mk_typesVec_node();
+    void
+    mk_typesVec_node();
 	
-	void
-	assign_new_ids();
+    void
+    assign_new_ids();
 }
 
 #endif /* _AST_UTILS_H */
