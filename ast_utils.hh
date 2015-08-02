@@ -1,15 +1,3 @@
-//jpms:bc
-/*----------------------------------------------------------------------------*\
- * File:        ast_utils.hh
- *
- * Description: 
- *
- * Author:      jpms
- * 
- *                                     Copyright (c) 2015, Joao Marques-Silva
-\*----------------------------------------------------------------------------*/
-//jpms:ec
-
 #ifndef _AST_UTILS_H
 #define _AST_UTILS_H 1
 
