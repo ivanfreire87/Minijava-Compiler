@@ -1,3 +1,3 @@
 # minijava-compiler
 
-A compiler for a variant of the language minijava.
+A compiler for a variant of the minijava language.
